@@ -1,5 +1,5 @@
-import 'package:flutter_demo/core/case_binding.dart';
-import 'package:flutter_demo/core/case_page.dart';
+import 'package:flutter_demo/page/case/case_binding.dart';
+import 'package:flutter_demo/page/case/case_page.dart';
 import 'package:get/get.dart';
 
 class Routes {

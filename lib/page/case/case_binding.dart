@@ -1,4 +1,4 @@
-import 'package:flutter_demo/core/case_controller.dart';
+import 'package:flutter_demo/page/case/case_controller.dart';
 import 'package:get/get.dart';
 
 class CaseBinding extends Bindings {

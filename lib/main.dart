@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/core/case_binding.dart';
-import 'package:flutter_demo/core/case_page.dart';
+import 'package:flutter_demo/page/case/case_binding.dart';
+import 'package:flutter_demo/page/case/case_page.dart';
 import 'package:flutter_demo/core/injection.dart';
 import 'package:flutter_demo/core/routes.dart';
 import 'package:flutter_demo/core/theme.dart';
