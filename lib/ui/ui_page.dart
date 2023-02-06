@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/other/page_scaffold.dart';
 import 'package:flutter_demo/ui/ui_aas_page.dart';
+import 'package:flutter_demo/ui/ui_toast_page.dart';
 
 class UIPage extends StatefulWidget {
   const UIPage({super.key});
@@ -17,6 +18,8 @@ class _UIPageState extends State<UIPage> {
         context,
         [
           PageInfo('adaptive_action_sheet', const UIAasPage(),
+              withScaffold: false),
+          PageInfo('toast', const UIToastPage(),
               withScaffold: false),
         ],
       ),

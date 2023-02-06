@@ -84,7 +84,7 @@ class PageInfo {
       this.builder, {
         this.withScaffold = true,
         this.padding = true,
-        this.showLog = true,
+        this.showLog = false,
       });
 
   String title;
