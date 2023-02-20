@@ -1,8 +1,5 @@
-
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/component/utils/index.dart';
+import 'package:hi_flutter/hi_flutter.dart';
 
 class LifecycleRoute extends StatefulWidget {
   const LifecycleRoute({Key? key}) : super(key: key);
@@ -23,13 +20,13 @@ class _LifecycleRouteState extends State<LifecycleRoute> with RouteAware {
   void didChangeDependencies() {
     super.didChangeDependencies();
     /// 路由订阅
-    AppRouteObserver().routeObserver.subscribe(this, ModalRoute.of(context)!);
+    HiNavigator.shared().routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
   @override
   void dispose() {
     /// 取消路由订阅
-    AppRouteObserver().routeObserver.unsubscribe(this);
+    HiNavigator.shared().routeObserver.unsubscribe(this);
     super.dispose();
   }
 

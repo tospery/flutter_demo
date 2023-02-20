@@ -9,14 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
   cupertino_icons: ^1.0.2
-  equatable: 2.0.5
-  get: 4.6.5
-  flukit: 3.0.1
-  getwidget: 3.0.1
-  adaptive_action_sheet: 2.0.2
+  hi_flutter:
+    path: ../flutter/packages/hi_flutter
 
 dev_dependencies:
   flutter_test:
@@ -26,4 +21,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - res/animation/
     - res/data/
+    - res/image/

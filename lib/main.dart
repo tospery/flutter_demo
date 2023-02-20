@@ -1,11 +1,8 @@
 import 'dart:async';
-import 'package:flukit/flukit.dart';
 import 'package:flutter/material.dart' hide Page;
-import 'package:flukit/example/example.dart';
-import 'package:flutter_demo/component/utils/index.dart';
-
-import 'component/core/index.dart';
-import 'module/index.dart';
+import 'package:flutter_demo/component/core/index.dart';
+import 'package:flutter_demo/module/index.dart';
+import 'package:hi_flutter/hi_flutter.dart';
 
 void main() {
   final logEmitter = getGlobalLogEmitter();
@@ -45,7 +42,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        navigatorObservers: [AppRouteObserver().routeObserver],
+        navigatorObservers: [HiNavigator.shared().routeObserver],
         routes: routesMap,
         onGenerateRoute: (RouteSettings settings) {
           String routeName = settings.name!.substring(1).toLowerCase();

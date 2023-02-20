@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'hide Page;
 import 'package:flukit/example/example.dart';
-import 'package:flutter_demo/module/lifecycle_route.dart';
+import 'package:flutter_demo/module/index.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -14,6 +14,7 @@ class MyHomePage extends StatefulWidget {
   static List<Page> getRoutes() {
     return [
       Page("Lifecycle", const LifecycleRoute()),
+      Page("Between", const BetweenRoute(), padding: false),
       // Page(
       //   "AccurateSizedBox",
       //   const AccurateSizedBoxRoute(),
