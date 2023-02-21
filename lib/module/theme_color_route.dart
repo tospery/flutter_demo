@@ -11,7 +11,11 @@ class ThemeColorRoute extends StatefulWidget {
 class _ThemeColorRouteState extends State<ThemeColorRoute> {
   @override
   Widget build(BuildContext context) {
-    var a1 = "#FF333333".toColor()!;
+    var a1 = Colors.grey.shade500;
+    var a2 = "#FF9E9E9E".toColor()!;
+    if (a1 == a2) {
+      log('相等的color');
+    }
     return ListView(
       shrinkWrap: true,
       children: [
@@ -44,6 +48,38 @@ class _ThemeColorRouteState extends State<ThemeColorRoute> {
         _buildItem(text: '23.onSecondary', bgColor: context.theme.colorScheme.onSecondary),
         _buildItem(text: '24.secondaryContainer', bgColor: context.theme.colorScheme.secondaryContainer),
         _buildItem(text: '25.onSecondaryContainer', bgColor: context.theme.colorScheme.onSecondaryContainer),
+        _buildItem(text: Colors.grey.toHexString(), bgColor: Colors.grey.shade500),
+        _buildItem(text: Colors.grey.shade500.toString(), bgColor: Colors.grey.shade500),
+        _buildItem(text: a2.toHexString(), bgColor: a2),
+        _buildItem(text: '白色', bgColor: Colors.white),
+        _buildItem(text: Colors.white.toHexString(), bgColor: Colors.white, fgColor: Colors.black),
+        _buildItem(text: Colors.white10.toHexString(), bgColor: Colors.white10, fgColor: Colors.black),
+        _buildItem(text: Colors.white12.toHexString(), bgColor: Colors.white12, fgColor: Colors.black),
+        _buildItem(text: Colors.white24.toHexString(), bgColor: Colors.white24, fgColor: Colors.black),
+        _buildItem(text: Colors.white30.toHexString(), bgColor: Colors.white30, fgColor: Colors.black),
+        _buildItem(text: Colors.white38.toHexString(), bgColor: Colors.white38, fgColor: Colors.black),
+        _buildItem(text: Colors.white54.toHexString(), bgColor: Colors.white54, fgColor: Colors.black),
+        _buildItem(text: Colors.white60.toHexString(), bgColor: Colors.white60, fgColor: Colors.black),
+        _buildItem(text: Colors.white70.toHexString(), bgColor: Colors.white70, fgColor: Colors.black),
+        _buildItem(text: '黑色', bgColor: Colors.black, fgColor: Colors.white),
+        _buildItem(text: Colors.black.toHexString(), bgColor: Colors.black, fgColor: Colors.white),
+        _buildItem(text: Colors.black12.toHexString(), bgColor: Colors.black12, fgColor: Colors.white),
+        _buildItem(text: Colors.black26.toHexString(), bgColor: Colors.black26, fgColor: Colors.white),
+        _buildItem(text: Colors.black38.toHexString(), bgColor: Colors.black38, fgColor: Colors.white),
+        _buildItem(text: Colors.black45.toHexString(), bgColor: Colors.black45, fgColor: Colors.white),
+        _buildItem(text: Colors.black54.toHexString(), bgColor: Colors.black54, fgColor: Colors.white),
+        _buildItem(text: Colors.black87.toHexString(), bgColor: Colors.black87, fgColor: Colors.white),
+        _buildItem(text: '灰色', bgColor: Colors.grey, fgColor: Colors.white),
+        _buildItem(text: Colors.grey.shade50.toHexString(), bgColor: Colors.grey.shade50, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade100.toHexString(), bgColor: Colors.grey.shade100, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade200.toHexString(), bgColor: Colors.grey.shade200, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade300.toHexString(), bgColor: Colors.grey.shade300, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade400.toHexString(), bgColor: Colors.grey.shade400, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade500.toHexString(), bgColor: Colors.grey.shade500, fgColor: Colors.black),
+        _buildItem(text: Colors.grey.shade600.toHexString(), bgColor: Colors.grey.shade600, fgColor: Colors.white),
+        _buildItem(text: Colors.grey.shade700.toHexString(), bgColor: Colors.grey.shade700, fgColor: Colors.white),
+        _buildItem(text: Colors.grey.shade800.toHexString(), bgColor: Colors.grey.shade800, fgColor: Colors.white),
+        _buildItem(text: Colors.grey.shade900.toHexString(), bgColor: Colors.grey.shade900, fgColor: Colors.white),
       ],
     );
   }
@@ -68,8 +104,7 @@ class _ThemeColorRouteState extends State<ThemeColorRoute> {
             style: TextStyle(color: fgColor ?? Colors.black, fontSize: 16),
           ),
           Text(
-            bgColor?.hexString ?? '',
-            // bgColor?.toString() ?? '',
+            bgColor?.toHexString() ?? '',
             style: TextStyle(color: fgColor ?? Colors.black, fontSize: 16),
           )
         ],
