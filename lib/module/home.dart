@@ -16,6 +16,8 @@ class MyHomePage extends StatefulWidget {
       Page("Lifecycle", const LifecycleRoute()),
       Page("Between", const BetweenRoute(), padding: false),
       Page("ThemeColor", const ThemeColorRoute(), padding: false),
+      Page("Format", const FormatRoute(), padding: false),
+      Page("TextStyle", const TextStyleRoute(), padding: false),
       // Page(
       //   "AccurateSizedBox",
       //   const AccurateSizedBoxRoute(),
